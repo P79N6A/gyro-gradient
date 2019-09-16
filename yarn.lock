@@ -9,7 +9,7 @@
   dependencies:
     "@babel/highlight" "^7.0.0"
 
-"@babel/core@^7.1.6":
+"@babel/core@^7.2.2":
   version "7.6.0"
   resolved "http://bnpm.byted.org/@babel/core/download/@babel/core-7.6.0.tgz#9b00f73554edd67bebc86df8303ef678be3d7b48"
   integrity sha1-mwD3NVTt1nvryG34MD72eL49e0g=
@@ -40,6 +40,18 @@
     source-map "^0.5.0"
     trim-right "^1.0.1"
 
+"@babel/helper-create-class-features-plugin@^7.2.1":
+  version "7.6.0"
+  resolved "http://bnpm.byted.org/@babel/helper-create-class-features-plugin/download/@babel/helper-create-class-features-plugin-7.6.0.tgz#769711acca889be371e9bc2eb68641d55218021f"
+  integrity sha1-dpcRrMqIm+Nx6bwutoZB1VIYAh8=
+  dependencies:
+    "@babel/helper-function-name" "^7.1.0"
+    "@babel/helper-member-expression-to-functions" "^7.5.5"
+    "@babel/helper-optimise-call-expression" "^7.0.0"
+    "@babel/helper-plugin-utils" "^7.0.0"
+    "@babel/helper-replace-supers" "^7.5.5"
+    "@babel/helper-split-export-declaration" "^7.4.4"
+
 "@babel/helper-function-name@^7.1.0":
   version "7.1.0"
   resolved "http://bnpm.byted.org/@babel/helper-function-name/download/@babel/helper-function-name-7.1.0.tgz#a0ceb01685f73355d4360c1247f582bfafc8ff53"
@@ -56,7 +68,7 @@
   dependencies:
     "@babel/types" "^7.0.0"
 
-"@babel/helper-member-expression-to-functions@^7.0.0", "@babel/helper-member-expression-to-functions@^7.5.5":
+"@babel/helper-member-expression-to-functions@^7.5.5":
   version "7.5.5"
   resolved "http://bnpm.byted.org/@babel/helper-member-expression-to-functions/download/@babel/helper-member-expression-to-functions-7.5.5.tgz#1fb5b8ec4453a93c439ee9fe3aeea4a84b76b590"
   integrity sha1-H7W47ERTqTxDnun+Ou6kqEt2tZA=
@@ -82,7 +94,7 @@
   resolved "http://bnpm.byted.org/@babel/helper-plugin-utils/download/@babel/helper-plugin-utils-7.0.0.tgz#bbb3fbee98661c569034237cc03967ba99b4f250"
   integrity sha1-u7P77phmHFaQNCN8wDlnupm08lA=
 
-"@babel/helper-replace-supers@^7.1.0":
+"@babel/helper-replace-supers@^7.5.5":
   version "7.5.5"
   resolved "http://bnpm.byted.org/@babel/helper-replace-supers/download/@babel/helper-replace-supers-7.5.5.tgz#f84ce43df031222d2bad068d2626cb5799c34bc2"
   integrity sha1-+EzkPfAxIi0rrQaNJibLV5nDS8I=
@@ -122,26 +134,15 @@
   resolved "http://bnpm.byted.org/@babel/parser/download/@babel/parser-7.6.0.tgz#3e05d0647432a8326cb28d0de03895ae5a57f39b"
   integrity sha1-PgXQZHQyqDJsso0N4DiVrlpX85s=
 
-"@babel/plugin-proposal-class-properties@7.1.0":
-  version "7.1.0"
-  resolved "http://bnpm.byted.org/@babel/plugin-proposal-class-properties/download/@babel/plugin-proposal-class-properties-7.1.0.tgz#9af01856b1241db60ec8838d84691aa0bd1e8df4"
-  integrity sha1-mvAYVrEkHbYOyIONhGkaoL0ejfQ=
+"@babel/plugin-proposal-class-properties@7.2.1":
+  version "7.2.1"
+  resolved "http://bnpm.byted.org/@babel/plugin-proposal-class-properties/download/@babel/plugin-proposal-class-properties-7.2.1.tgz#c734a53e0a1ec40fe5c22ee5069d26da3b187d05"
+  integrity sha1-xzSlPgoexA/lwi7lBp0m2jsYfQU=
   dependencies:
-    "@babel/helper-function-name" "^7.1.0"
-    "@babel/helper-member-expression-to-functions" "^7.0.0"
-    "@babel/helper-optimise-call-expression" "^7.0.0"
-    "@babel/helper-plugin-utils" "^7.0.0"
-    "@babel/helper-replace-supers" "^7.1.0"
-    "@babel/plugin-syntax-class-properties" "^7.0.0"
-
-"@babel/plugin-syntax-class-properties@^7.0.0":
-  version "7.2.0"
-  resolved "http://bnpm.byted.org/@babel/plugin-syntax-class-properties/download/@babel/plugin-syntax-class-properties-7.2.0.tgz#23b3b7b9bcdabd73672a9149f728cd3be6214812"
-  integrity sha1-I7O3ubzavXNnKpFJ9yjNO+YhSBI=
-  dependencies:
+    "@babel/helper-create-class-features-plugin" "^7.2.1"
     "@babel/helper-plugin-utils" "^7.0.0"
 
-"@babel/plugin-syntax-jsx@^7.0.0":
+"@babel/plugin-syntax-jsx@^7.2.0":
   version "7.2.0"
   resolved "http://bnpm.byted.org/@babel/plugin-syntax-jsx/download/@babel/plugin-syntax-jsx-7.2.0.tgz#0b85a3b4bc7cdf4cc4b8bf236335b907ca22e7c7"
   integrity sha1-C4WjtLx830zEuL8jYzW5B8oi58c=
@@ -203,6 +204,13 @@
   version "1.5.2"
   resolved "http://bnpm.byted.org/@types/q/download/@types/q-1.5.2.tgz#690a1475b84f2a884fd07cd797c00f5f31356ea8"
   integrity sha1-aQoUdbhPKohP0HzXl8APXzE1bqg=
+
+"@types/resolve@0.0.8":
+  version "0.0.8"
+  resolved "http://bnpm.byted.org/@types/resolve/download/@types/resolve-0.0.8.tgz#f26074d238e02659e323ce1a13d041eee280e194"
+  integrity sha1-8mB00jjgJlnjI84aE9BB7uKA4ZQ=
+  dependencies:
+    "@types/node" "*"
 
 acorn-dynamic-import@^4.0.0:
   version "4.0.0"
@@ -431,10 +439,10 @@ buffer-from@^1.0.0:
   resolved "http://bnpm.byted.org/buffer-from/download/buffer-from-1.1.1.tgz#32713bc028f75c02fdb710d7c7bcec1f2c6070ef"
   integrity sha1-MnE7wCj3XAL9txDXx7zsHyxgcO8=
 
-builtin-modules@^2.0.0:
-  version "2.0.0"
-  resolved "http://bnpm.byted.org/builtin-modules/download/builtin-modules-2.0.0.tgz#60b7ef5ae6546bd7deefa74b08b62a43a232648e"
-  integrity sha1-YLfvWuZUa9fe76dLCLYqQ6IyZI4=
+builtin-modules@^3.1.0:
+  version "3.1.0"
+  resolved "http://bnpm.byted.org/builtin-modules/download/builtin-modules-3.1.0.tgz#aad97c15131eb76b65b50ef208e7584cd76a7484"
+  integrity sha1-qtl8FRMet2tltQ7yCOdYTNdqdIQ=
 
 caller-callsite@^2.0.0:
   version "2.0.0"
@@ -1169,10 +1177,10 @@ fs-constants@^1.0.0:
   resolved "http://bnpm.byted.org/fs-constants/download/fs-constants-1.0.0.tgz#6be0de9be998ce16af8afc24497b9ee9b7ccd9ad"
   integrity sha1-a+Dem+mYzhavivwkSXue6bfM2a0=
 
-fs-extra@7.0.0:
-  version "7.0.0"
-  resolved "http://bnpm.byted.org/fs-extra/download/fs-extra-7.0.0.tgz#8cc3f47ce07ef7b3593a11b9fb245f7e34c041d6"
-  integrity sha1-jMP0fOB+97NZOhG5+yRffjTAQdY=
+fs-extra@7.0.1:
+  version "7.0.1"
+  resolved "http://bnpm.byted.org/fs-extra/download/fs-extra-7.0.1.tgz#4f189c44aa123b895f722804f55ea23eadc348e9"
+  integrity sha1-TxicRKoSO4lfcigE9V6iPq3DSOk=
   dependencies:
     graceful-fs "^4.1.2"
     jsonfile "^4.0.0"
@@ -1751,14 +1759,14 @@ merge-stream@^1.0.1:
   dependencies:
     readable-stream "^2.0.1"
 
-microbundle@^0.9.0:
-  version "0.9.0"
-  resolved "http://bnpm.byted.org/microbundle/download/microbundle-0.9.0.tgz#bbec53047ff238c592aba0e5fd8fea3ce7654de3"
-  integrity sha1-u+xTBH/yOMWSq6Dl/Y/qPOdlTeM=
+microbundle@^0.11.0:
+  version "0.11.0"
+  resolved "http://bnpm.byted.org/microbundle/download/microbundle-0.11.0.tgz#266bcf4210192698c23fe3bf3581ab81d31a14d0"
+  integrity sha1-JmvPQhAZJpjCP+O/NYGrgdMaFNA=
   dependencies:
-    "@babel/core" "^7.1.6"
-    "@babel/plugin-proposal-class-properties" "7.1.0"
-    "@babel/plugin-syntax-jsx" "^7.0.0"
+    "@babel/core" "^7.2.2"
+    "@babel/plugin-proposal-class-properties" "7.2.1"
+    "@babel/plugin-syntax-jsx" "^7.2.0"
     "@babel/polyfill" "^7.0.0"
     asyncro "^3.0.0"
     autoprefixer "^9.0.0"
@@ -1771,6 +1779,7 @@ microbundle@^0.9.0:
     gzip-size "^5.0.0"
     pretty-bytes "^5.1.0"
     rollup "^0.67.3"
+    rollup-plugin-alias "^1.5.1"
     rollup-plugin-babel "^4.1.0-0"
     rollup-plugin-buble "^0.19.4"
     rollup-plugin-bundle-size "^1.0.1"
@@ -1778,12 +1787,12 @@ microbundle@^0.9.0:
     rollup-plugin-es3 "^1.1.0"
     rollup-plugin-flow "^1.1.1"
     rollup-plugin-json "^3.1.0"
-    rollup-plugin-node-resolve "^3.3.0"
+    rollup-plugin-node-resolve "^4.0.0"
     rollup-plugin-postcss "^1.6.1"
     rollup-plugin-preserve-shebang "^0.1.6"
     rollup-plugin-sizes "^0.4.2"
     rollup-plugin-terser "^3.0.0"
-    rollup-plugin-typescript2 "^0.18.0"
+    rollup-plugin-typescript2 "^0.19.0"
     sade "^1.4.0"
     tiny-glob "^0.2.6"
     tslib "^1.9.0"
@@ -2897,7 +2906,7 @@ resolve@1.8.1:
   dependencies:
     path-parse "^1.0.5"
 
-resolve@^1.1.6, resolve@^1.10.0, resolve@^1.3.2, resolve@^1.5.0:
+resolve@^1.10.0, resolve@^1.3.2, resolve@^1.5.0:
   version "1.12.0"
   resolved "http://bnpm.byted.org/resolve/download/resolve-1.12.0.tgz#3fc644a35c84a48554609ff26ec52b66fa577df6"
   integrity sha1-P8ZEo1yEpIVUYJ/ybsUrZvpXffY=
@@ -2913,6 +2922,13 @@ rgba-regex@^1.0.0:
   version "1.0.0"
   resolved "http://bnpm.byted.org/rgba-regex/download/rgba-regex-1.0.0.tgz#43374e2e2ca0968b0ef1523460b7d730ff22eeb3"
   integrity sha1-QzdOLiyglosO8VI0YLfXMP8i7rM=
+
+rollup-plugin-alias@^1.5.1:
+  version "1.5.2"
+  resolved "http://bnpm.byted.org/rollup-plugin-alias/download/rollup-plugin-alias-1.5.2.tgz#f15a1cc8ee0debf74ab5c2bb68a944a66b568411"
+  integrity sha1-8VocyO4N6/dKtcK7aKlEpmtWhBE=
+  dependencies:
+    slash "^3.0.0"
 
 rollup-plugin-babel@^4.1.0-0:
   version "4.3.3"
@@ -2970,14 +2986,15 @@ rollup-plugin-json@^3.1.0:
   dependencies:
     rollup-pluginutils "^2.3.1"
 
-rollup-plugin-node-resolve@^3.3.0:
-  version "3.4.0"
-  resolved "http://bnpm.byted.org/rollup-plugin-node-resolve/download/rollup-plugin-node-resolve-3.4.0.tgz#908585eda12e393caac7498715a01e08606abc89"
-  integrity sha1-kIWF7aEuOTyqx0mHFaAeCGBqvIk=
+rollup-plugin-node-resolve@^4.0.0:
+  version "4.2.4"
+  resolved "http://bnpm.byted.org/rollup-plugin-node-resolve/download/rollup-plugin-node-resolve-4.2.4.tgz#7d370f8d6fd3031006a0032c38262dd9be3c6250"
+  integrity sha1-fTcPjW/TAxAGoAMsOCYt2b48YlA=
   dependencies:
-    builtin-modules "^2.0.0"
+    "@types/resolve" "0.0.8"
+    builtin-modules "^3.1.0"
     is-module "^1.0.0"
-    resolve "^1.1.6"
+    resolve "^1.10.0"
 
 rollup-plugin-postcss@^1.6.1:
   version "1.6.3"
@@ -3027,12 +3044,12 @@ rollup-plugin-terser@^3.0.0:
     serialize-javascript "^1.5.0"
     terser "^3.8.2"
 
-rollup-plugin-typescript2@^0.18.0:
-  version "0.18.1"
-  resolved "http://bnpm.byted.org/rollup-plugin-typescript2/download/rollup-plugin-typescript2-0.18.1.tgz#921865828080a254c088c6bc181ca654e5ef73c6"
-  integrity sha1-khhlgoCAolTAiMa8GBymVOXvc8Y=
+rollup-plugin-typescript2@^0.19.0:
+  version "0.19.3"
+  resolved "http://bnpm.byted.org/rollup-plugin-typescript2/download/rollup-plugin-typescript2-0.19.3.tgz#713063233461765f030a2baa2640905c2656164f"
+  integrity sha1-cTBjIzRhdl8DCiuqJkCQXCZWFk8=
   dependencies:
-    fs-extra "7.0.0"
+    fs-extra "7.0.1"
     resolve "1.8.1"
     rollup-pluginutils "2.3.3"
     tslib "1.9.3"
@@ -3085,7 +3102,7 @@ safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   resolved "http://bnpm.byted.org/safe-buffer/download/safe-buffer-5.1.2.tgz#991ec69d296e0313747d59bdfd2b745c35f8828d"
   integrity sha1-mR7GnSluAxN0fVm9/St0XDX4go0=
 
-sass@^1.15.3:
+sass@^1.22.12:
   version "1.22.12"
   resolved "http://bnpm.byted.org/sass/download/sass-1.22.12.tgz#5cbdd38720ffd1857da695331faee9f634bcb5d7"
   integrity sha1-XL3ThyD/0YV9ppUzH67p9jS8tdc=
@@ -3137,6 +3154,11 @@ simple-swizzle@^0.2.2:
   integrity sha1-pNprY1/8zMoz9w0Xy5JZLeleVXo=
   dependencies:
     is-arrayish "^0.3.1"
+
+slash@^3.0.0:
+  version "3.0.0"
+  resolved "http://bnpm.byted.org/slash/download/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"
+  integrity sha1-ZTm+hwwWWtvVJAIg2+Nh8bxNRjQ=
 
 sort-keys@^1.0.0:
   version "1.1.2"
