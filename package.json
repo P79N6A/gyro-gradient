@@ -2,9 +2,9 @@
   "name": "gyro-gradient",
   "version": "0.0.1",
   "description": "Add a gyroscope gradient animation to the Dom node",
-  "main": "dist/gyroGradient.js",
-  "umd:main": "dist/gyroGradient.umd.js",
-  "module": "dist/gyroGradient.mjs",
+  "main": "dist/gyro-gradient.js",
+  "umd:main": "dist/gyro-gradient.umd.js",
+  "module": "dist/gyro-gradient.mjs",
   "source": "src/index.js",
   "scripts": {
     "start": "microbundle watch --target web --name gyroGradient",

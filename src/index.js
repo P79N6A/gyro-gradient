@@ -10,6 +10,21 @@ if (isSupported()) {
   const STRENGTH = 300;
   const PI_DIVIDED_BY_180 = Math.PI / 180;
 
+  // 生成噪音
+  const generateNoise = (width, height) => {
+    const canvas = document.createElement("canvas");
+    canvas.width = width;
+    canvas.height = height;
+    const ctx = canvas.getContext("2d");
+    for (let x = 0; x < width; x++) {
+      for (let y = 0; y < height; y++) {
+        ctx.fillStyle = `rgba(0, 0, 0, ${Math.random()})`;
+        ctx.fillRect(x, y, 1, 1);
+      }
+    }
+    return canvas;
+  };
+
   const state = {
     orientationInitial: null,
     orientation: {
@@ -105,6 +120,20 @@ if (isSupported()) {
     };
   };
 
+  // 添加蒙版
+  const getPatternWithOpacity = (pattern, opacity) => {
+    const source = state.patterns[pattern];
+    if (!source) return null;
+    const canvas = document.createElement("canvas");
+    canvas.width = source.width;
+    canvas.height = source.height;
+    const ctx = canvas.getContext("2d");
+    ctx.fillStyle = `rgba(0, 0, 0, ${1 - opacity})`;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(source, 0, 0);
+    return canvas;
+  };
+
   // 处理输入的渐变属性
   const sanitizeGradient = gradient =>
     gradient
@@ -127,35 +156,6 @@ if (isSupported()) {
         ...step,
         colorRGBA: toRGBA(step.color, step.opacity)
       }));
-
-  // 生成噪音
-  const generateNoise = (width, height) => {
-    const canvas = document.createElement("canvas");
-    canvas.width = width;
-    canvas.height = height;
-    const ctx = canvas.getContext("2d");
-    for (let x = 0; x < width; x++) {
-      for (let y = 0; y < height; y++) {
-        ctx.fillStyle = `rgba(0, 0, 0, ${Math.random()})`;
-        ctx.fillRect(x, y, 1, 1);
-      }
-    }
-    return canvas;
-  };
-
-  // 添加蒙版
-  const getPatternWithOpacity = (pattern, opacity) => {
-    const source = state.patterns[pattern];
-    if (!source) return null;
-    const canvas = document.createElement("canvas");
-    canvas.width = source.width;
-    canvas.height = source.height;
-    const ctx = canvas.getContext("2d");
-    ctx.fillStyle = `rgba(0, 0, 0, ${1 - opacity})`;
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(source, 0, 0);
-    return canvas;
-  };
 
   // 将样式对象转换为实际样式
   const setup = state => {
@@ -264,7 +264,7 @@ if (isSupported()) {
 
     const { orientation, orientationInitial, origin, viewport } = state;
 
-    const alpha =  orientation.alpha - orientationInitial.alpha;
+    const alpha = orientation.alpha - orientationInitial.alpha;
     const beta = orientation.beta - orientationInitial.beta;
     const gamma = orientation.gamma - orientationInitial.gamma;
 
