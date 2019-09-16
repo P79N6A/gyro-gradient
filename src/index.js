@@ -264,18 +264,18 @@ if (isSupported()) {
 
     const { orientation, orientationInitial, origin, viewport } = state;
 
-    const alpha = orientationInitial.alpha - orientation.alpha;
-    const beta = orientationInitial.beta - orientation.beta;
-    const gamma = orientationInitial.gamma - orientation.gamma;
+    const alpha =  orientation.alpha - orientationInitial.alpha;
+    const beta = orientation.beta - orientationInitial.beta;
+    const gamma = orientation.gamma - orientationInitial.gamma;
 
     let { x, y, z } = origin;
 
-    x = x * Math.cos(-degToRad(alpha)) - y * Math.sin(-degToRad(alpha));
-    y = y * Math.cos(-degToRad(alpha)) + x * Math.sin(-degToRad(alpha));
-    y = y * Math.cos(-degToRad(beta)) - z * Math.sin(-degToRad(beta));
-    z = z * Math.cos(-degToRad(beta)) + y * Math.sin(-degToRad(beta));
-    z = z * Math.cos(-degToRad(gamma)) - x * Math.sin(-degToRad(gamma));
-    x = x * Math.cos(-degToRad(gamma)) + z * Math.sin(-degToRad(gamma));
+    x = x * Math.cos(degToRad(alpha)) - y * Math.sin(degToRad(alpha));
+    y = y * Math.cos(degToRad(alpha)) + x * Math.sin(degToRad(alpha));
+    y = y * Math.cos(degToRad(beta)) - z * Math.sin(degToRad(beta));
+    z = z * Math.cos(degToRad(beta)) + y * Math.sin(degToRad(beta));
+    z = z * Math.cos(degToRad(gamma)) - x * Math.sin(degToRad(gamma));
+    x = x * Math.cos(degToRad(gamma)) + z * Math.sin(degToRad(gamma));
 
     const viewportScaleFactor = viewport.width / viewport.height;
     const px = x / (STRENGTH * viewportScaleFactor);
